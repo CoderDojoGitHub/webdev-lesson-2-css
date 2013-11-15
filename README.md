@@ -56,13 +56,15 @@ When we combine them using CodePen, we get a page that looks like this:
 
 ![Story with CSS](screenshots/1.png)
 
+## How CSS Works
+
 We can get an idea of what's happening by looking at each line of the CSS.
 
-* For any ```body``` tags
+* For any ```<body>``` tags
     1. Use ```Arial``` as the font
     2. Set the background color to ```#eee``` (A ***hex color***)
     3. Set the foreground color to ```green```
-* For any ```img``` tags
+* For any ```<img>``` tags
     1. Give it a ```2px``` wide, ```solid``` border and color it ```green```
     2. Give it ```2px``` of ***padding***
 
@@ -74,4 +76,27 @@ We can get an idea of what's happening by looking at each line of the CSS.
 > we can press Alt to bring up a color picker that can help us find hex color
 > codes.
 
+Notice how we are modifying visual features with CSS. We wrote the story in
+HTML, but we never mentioned ```green``` anywhere! Separating content from
+presentation helps us stay focused and organized.
+
+CSS follows a basic pattern. First, we select the HTML elements we want to
+change the look of. Then, we say what aspects of their look we want to change.
+Take this snippet for example:
+
+```css
+body {
+  font-family: Arial;
+  background-color: #eee;
+  color: green;
+}
+```
+
+We are selecting the ```<body>``` tag, then saying we want to modify the font,
+background color, and foreground color.
+
+The part that selects the tags is called the **selector**, and each modification
+of the look is a **declaration**. A combination of a selector and any number
+of declarations is called a **rule**. A CSS file can contain as many rules as
+we want.
 
