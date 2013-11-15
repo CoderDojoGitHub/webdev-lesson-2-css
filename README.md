@@ -313,3 +313,106 @@ cool.
 Let's wipe our CSS clean. It's time for a redesign.
 
 ![Real World Example 1](screenshots/8.png)
+
+ I'm just going to throw
+some new properties at you! Play around with them and see if you can figure
+out what they do. Remember you can look all these properties up in the
+[reference guide](http://www.w3schools.com/cssref/)!
+
+We're going to make our web page 600px wide. And I'm really not digging the
+Times New Roman. Every font expert knows Helvetica is the best font. And if the
+computer doesn't have that, well I guess Arial is ok!
+
+
+```css
+body {
+    width: 600px;
+    margin: auto;
+    font-family: Helvetica, Arial;
+}
+```
+
+![Real World Example 2](screenshots/9.png)
+
+Those ```<img>```s are looking a bit large!
+
+```css
+img {
+    width: 50%;
+}
+```
+
+![Real World Example 3](screenshots/10.png)
+
+Let's give it a dash of color.
+
+```css
+html {
+    background-color: oldlace;
+    color: burlywood;
+}
+```
+
+![Real World Example 4](screenshots/11.png)
+
+That header needs a bit of more personality.
+```css
+h1 {
+    background-color: burlywood;
+    color: oldlace;
+    padding:10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px gray;
+    text-shadow: -1px -1px 1px white;
+}
+```
+
+![Real World Example 5](screenshots/12.png)
+
+Let's scroll to the bottom. I want the text color of the ```<li>```s in
+```#doglist``` to be ```midnightblue```, the text color of the ```<li>```s in
+```#catlist``` to be ```maroon```, and I want to remove the default
+list styling.
+
+```css
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul#doglist li {
+    color: midnightblue;
+}
+
+ul#catlist li {
+    color: maroon;
+}
+```
+
+![Real World Example 6](screenshots/13.png)
+
+Let's add a cool effect when you hover an ```<li>```!
+
+```css
+li {
+    transition: background-color 0.5s;
+    padding:5px;
+}
+
+li:hover {
+    background-color: burlywood;
+}
+```
+
+![Real World Example 7](screenshots/14.png)
+
+Here's a copy of the finished product on my CodePen!
+[http://codepen.io/hunterbridges/pen/ahmAJ](http://codepen.io/hunterbridges/pen/ahmAJ)
+
+## Next Lesson
+
+Next week, we are going to look more deeply into the layout system and start
+understanding how to arrange our pages in more dynamic ways! We're also
+going to start looking at some common design patterns, and we'll learn how to
+plan the layout of our page.
