@@ -163,3 +163,28 @@ And here's a new CSS rule for the ```red``` class:
 An ID is useful for when we want to give an element a specific name. IDs
 are meant to be unique, so we aren't supposed to have two elements with the
 same ID. That's what makes an ID different from a class.
+
+Let's say we want to give our ```<ul>``` the ID ```doglist```. We just add
+the ```id``` attribute. Here's our new HTML:
+
+```html
+<ul id="doglist">
+  <li>Poodles</li>
+  <li class="big red">Great Danes</li>
+  <li class="big">Black Labs</li>
+</ul>
+```
+
+In CSS, we target an ID using a hash mark ```#``` followed by the ID. Here's
+our new CSS rule:
+
+```css
+#doglist {
+    border: 1px dashed black;
+}
+```
+
+![#doglist ID example](screenshots/4.png)
+
+**Protip!** Selecting by ID is faster for the browser to process than selecting
+by class or tag name. Use IDs whenever you need to style just one element!
