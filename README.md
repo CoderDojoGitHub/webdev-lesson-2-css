@@ -1,4 +1,4 @@
-# Build a web page, Lesson 2 – Design and CSS
+# Build a web page, Lesson 2 – CSS
 
 ## Overview
 
@@ -188,3 +188,29 @@ our new CSS rule:
 
 **Protip!** Selecting by ID is faster for the browser to process than selecting
 by class or tag name. Use IDs whenever you need to style just one element!
+
+### Parent-child relationships
+
+Here is where things start to get interesting. We can select HTML elements
+based on which elements contain them. To get set up for this example,
+let's add a new ```<ul>``` after ```#doglist```:
+
+```html
+<ul id="doglist">
+  <li>Poodles</li>
+  <li class="big red">Great Danes</li>
+  <li class="big">Black Labs</li>
+</ul>
+
+<h3 class="red">Oh, and here are some cats just for fun!</h3>
+
+<ul id="catlist">
+  <li>Tabby</li>
+  <li>Grumpy</li>
+  <li>Siamese</li>
+</ul>
+```
+
+Here is how our page should look after we've added the new HTML:
+
+![#doglist ID example](screenshots/4.png)
