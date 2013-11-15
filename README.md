@@ -213,4 +213,4 @@ let's add a new ```<ul>``` after ```#doglist```:
 
 Here is how our page should look after we've added the new HTML:
 
-![#doglist ID example](screenshots/4.png)
+![Hierarchy example 1](screenshots/5.png)
