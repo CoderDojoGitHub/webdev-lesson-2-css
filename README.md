@@ -56,7 +56,7 @@ When we combine them using CodePen, we get a page that looks like this:
 
 ![Story with CSS](screenshots/1.png)
 
-## How CSS Works
+### How CSS Works
 
 We can get an idea of what's happening by looking at each line of the CSS.
 
@@ -92,11 +92,74 @@ body {
 }
 ```
 
-We are selecting the ```<body>``` tag, then saying we want to modify the font,
-background color, and foreground color.
+We are selecting all ```<body>``` tags (We only have 1),
+then saying we want to modify the font, background color, and foreground color.
 
 The part that selects the tags is called the **selector**, and each modification
-of the look is a **declaration**. A combination of a selector and any number
+is called a **declaration**. A combination of a selector and any number
 of declarations is called a **rule**. A CSS file can contain as many rules as
 we want.
 
+Let's break down the concepts of **selectors** and **declarations**.
+
+## Selectors
+
+So far we have seen selectors that find HTML elements by tag name.
+CSS allows us to be much more flexible about targeting HTML elements to modify.
+We can select using **classes**, **IDs**, and **parent-child relationships**.
+
+### Classes
+
+Every HTML tag can have a ```class``` attribute. Classes help us be more
+specific than just tag names. Let's take our ```<ul>``` for example, and add
+the class ```big``` to the ```<li>``` tags that represent big dogs.
+
+```html
+<ul>
+  <li>Poodles</li>
+  <li class="big">Great Danes</li>
+  <li class="big">Black Labs</li>
+</ul>
+```
+
+Now we are going to make the font bigger for the class ```big```. In our
+selector, we target a class by using a period ```.``` followed by the class
+name. Let's add this to our CSS file:
+
+```css
+.big {
+    font-size: 24px;
+}
+```
+
+![.big class example](screenshots/2.png)
+
+Using a class, we only increased the font size for Great Danes and Black Labs!
+
+An HTML element can also have multiple classes. Let's try adding a ```red```
+class to Great Danes. We just type a space then the new class name.
+Here's our new ```<ul>``` HTML:
+
+```html
+<ul>
+  <li>Poodles</li>
+  <li class="big red">Great Danes</li>
+  <li class="big">Black Labs</li>
+</ul>
+```
+
+And here's a new CSS rule for the ```red``` class:
+
+```css
+.red {
+    color: #ff0000;
+}
+```
+
+![.red class example](screenshots/3.png)
+
+### IDs
+
+An ID is useful for when we want to give an element a specific name. IDs
+are meant to be unique, so we aren't supposed to have two elements with the
+same ID. That's what makes an ID different from a class.
