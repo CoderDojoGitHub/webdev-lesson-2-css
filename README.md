@@ -277,3 +277,39 @@ li.red {
 
 Notice how even though the ```<h3>``` is of the class ```.red```, it doesn't
 get underlined because we combined the class with the tag name in the selector.
+
+## Declarations
+
+I have some good news for you... Selectors were the hard part, and declarations
+are the fun part! Declarations are the style modifications we apply in each
+CSS rule. There are two parts to each declaration: the **property** and the
+**value**. The pattern is:
+
+```property: value;```
+
+### Properties
+
+The properties we are able to modify with CSS are set by the web browser. A list
+of most common ones can be found [here](http://www.w3schools.com/cssref/). A few
+examples of CSS properties we have already seen are ```background-color```,
+```font-family```, ```border```, and ```text-decoration```.
+
+### Values
+
+The values we can use are determined by the properties. For example, the
+```width``` property can accept a size, and the ```background-color``` property
+can accept a color. It wouldn't make much sense to say ```width: red;``` or
+```background-color: 100px;``` would it? Check a
+[reference guide](http://www.w3schools.com/cssref/) for help finding out which
+values can go with which properties.
+
+## CSS Rules in the Real World
+
+Up until now, we've only seen rules with few declarations. When we seriously
+start styling, we are going to deal with some lengthy CSS rules! But the payoff
+is, we can start putting all these pieces together to make things look really
+cool.
+
+Let's wipe our CSS clean. It's time for a redesign.
+
+![Real World Example 1](screenshots/8.png)
