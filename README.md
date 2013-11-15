@@ -214,3 +214,66 @@ let's add a new ```<ul>``` after ```#doglist```:
 Here is how our page should look after we've added the new HTML:
 
 ![Hierarchy example 1](screenshots/5.png)
+
+So let's say our boss comes in and tells us we have to make all the red dogs
+be italic. We can't edit our ```.red``` rule that we have already, because that
+would make our ```<h3>``` tag also turn red! But what we can do is create a
+selector that only targets ```.red``` elements inside of ```#doglist```, and
+that will do exactly what we want.
+
+By using a space ``` ``` in our selector, we can target HTML elements based on
+the elements that contain them. To make all the ```.red``` elements inside of
+```#doglist``` be italic, we would do this:
+
+```css
+#doglist .red {
+    font-style: italic;
+}
+```
+
+![Hierarchy example 2](screenshots/6.png)
+
+We can describe containment as deeply as we want! For example, here is a
+selector for ```<img>``` tags that are inside of ```<strong>``` tags
+that are inside of ```#doglist```:
+
+```css
+#doglist strong img {
+
+}
+```
+
+### Combining them all
+
+So now we have learned the basic building blocks of CSS selectors: tag names,
+classes, IDs, and containment. Let's explore how we can combine these concepts
+to be even more specific!
+
+Let's add the ```red``` class to Grumpy Cat:
+
+```html
+  <li class="red">Grumpy</li>
+```
+
+Let's add a rule to make all ```<li>``` tags in ```#catlist``` have a
+```yellow``` background. That will really bring them to life.
+
+```css
+#catlist li {
+    background-color: yellow;
+}
+```
+
+Let's also add a rule to make all ```<li>``` tags with the ```.red``` class
+be underlined.
+
+```css
+li.red {
+    text-decoration: underline;
+}
+```
+
+![Combo example 1](screenshots/7.png)
+
+Notice how even though the ```<h3>``` is of the class ```.red```, it doesn't
+get underlined because we combined the class with the tag name in the selector.
